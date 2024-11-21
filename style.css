@@ -1,3 +1,13 @@
+@font-face {
+    font-family: 'XBAND-Rough';
+    src:url('./style_assets/XBAND-Rough.ttf.woff') format('woff'),
+        url('./style_assets/XBAND-Rough.ttf.svg#XBAND-Rough') format('svg'),
+        url('./style_assets/XBAND-Rough.ttf.eot'),
+        url('./style_assets/XBAND-Rough.ttf.eot?#iefix') format('embedded-opentype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
 .noselect {
   -webkit-touch-callout: none; /* iOS Safari */
   -webkit-user-select: none;   /* Chrome/Safari/Opera */
@@ -39,6 +49,14 @@
 .dropdown:hover .dropdown-content {
     display: block;
 }
-
+/* 
 .dropdown:hover .dropbtn {
+} */
+
+.choice {
+    font-family: 'XBAND-Rough';
+    color: white; 
+    font-size: 75pt;
+    font-weight: 500;
+    text-decoration: none;
 }

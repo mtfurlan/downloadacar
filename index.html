@@ -1,34 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>You Wouldn't Download A Car</title>
-        <meta charset="UTF-8">
-        <link href="./style.css" rel="stylesheet">
-    </head>
-    <body class="noselect" style="margin:auto;width: 99%;background-color:black;max-width: 1000px;text-align: center">
-        <img src="./would.jpg" alt="Would you download a car?" style="margin:auto;width: 99%;">
-        <!-- <img src="./wouldyou.png" style="margin:auto; width: 65%;"> -->
-        <br/><br/><br/><br/><br/>
 
-        <div style="border-style: ridge">
-            <a href="https://en.wikipedia.org/wiki/The_History_of_Little_Goody_Two-Shoes">
-                <img src="no.png" alt="I wouldn't">
-            </a>
-        </div>
-        <br/><br/><br/><br/>
+<head>
+    <title>You Wouldn't Download A Car</title>
+    <meta charset="UTF-8">
+    <link href="./style.css" rel="stylesheet">
+</head>
 
-        <div style="border-style: ridge">
-            <a href="./Car.rar">
-                <img id="imgRand" src="yes/yes_0.png" alt="I would">
-            </a>
-        </div>
-        <br/>
-        <br/>
-        <br/>
-        <script>
-            // random number between 0 and 5
-            var numRand = Math.floor(Math.random()*6);
-            document.getElementById("imgRand").src = "./yes/yes_"+numRand+".png";
-        </script>
-    </body>
+<body class="noselect" style="margin:auto;width: 99%;background-color:black;max-width: 1000px;text-align: center">
+    <img src="./would.jpg" alt="Would you download a car?" style="margin:auto;width: 99%;">
+    <!-- <img src="./wouldyou.png" style="margin:auto; width: 65%;"> -->
+    <br /><br /><br /><br /><br />
+    <div style="border-style: ridge">
+        <a class="choice" href="https://en.wikipedia.org/wiki/The_History_of_Little_Goody_Two-Shoes">
+            You're Right
+        </a>
+    </div>
+    <br /><br /><br /><br />
+
+    <div style="border-style: ridge">
+        <a class="choice" id="iWould" href="./Car.rar">
+            You Wouldn't
+        </a>
+    </div>
+    <br />
+    <br />
+    <br />
+    <script async>
+        // random number between 0 and 5
+        var numRand = Math.floor(Math.random() * 6);
+        const yesArray = ["You Wouldn't", "Or Would I", "Wrong", "Ya Mean Like This", "Guess Again Dummy", "Yes I Would"]
+        document.getElementById("iWould").innerText = yesArray[numRand];
+    </script>
+</body>
+
 </html>
