@@ -23,8 +23,13 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v4
 
+      - name: move
+        run: |
+          mkdir dist
+          mv * dist
+
     - name: Upload
       uses: teahouse-hosting/upload@trunk
       with:
         domain: test.downloadacar.com
-        root: .
+        root: dist
