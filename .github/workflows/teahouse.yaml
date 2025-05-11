@@ -26,7 +26,7 @@ jobs:
       - name: move
         run: |
           mkdir dist
-          for f in ./*; do if [[ "$f" != "./dist" ]]; then cp "$f" dist/; fi; done
+          for f in ./*; do if [[ "$f" != "./dist" ]]; then mv "$f" dist/; fi; done
 
       - name: Upload
         uses: teahouse-hosting/upload@trunk
